@@ -129,13 +129,13 @@ while True:
 
     if it % 200 == 0 and it > 0:
         rmse = math.sqrt(sum_err / 200)
-        print "Training RMSE: %.4f, Param Norm: %.2f, Grad Norm: %.2f" % (rmse, pnorm, sum_gnorm / 200) 
+        print ("Training RMSE: %.4f, Param Norm: %.2f, Grad Norm: %.2f" % (rmse, pnorm, sum_gnorm / 200) )
         sys.stdout.flush()
         sum_err, sum_gnorm = 0.0, 0.0
     if it % 100000 == 0 and it > 0:
         saver.save(session, opts.save_path + "/model.ckpt-%d" % it)
-        print "Validation RMSE: %.4f" % evaluate(valid)
+        print ("Validation RMSE: %.4f" % evaluate(valid))
         _lr *= 0.9
-        print "Learning Rate: %.6f" % _lr
+        print ("Learning Rate: %.6f" % _lr)
 
 saver.save(session, opts.save_path + "/model.final")

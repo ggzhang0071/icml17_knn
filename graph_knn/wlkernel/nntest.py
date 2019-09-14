@@ -70,4 +70,4 @@ def evaluate(data):
 test = load_data(opts.test_path)
 saver = tf.train.Saver()
 saver.restore(session, tf.train.latest_checkpoint(opts.model_path))
-print "Test RMSE: %.4f" % evaluate(test)
+print ("Test RMSE: %.4f" % evaluate(test))

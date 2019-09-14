@@ -326,7 +326,7 @@ class Model(object):
 
 
 def main(args):
-    print args
+    print(args)
 
     model = None
 

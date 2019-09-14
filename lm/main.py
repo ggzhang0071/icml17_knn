@@ -264,5 +264,5 @@ def main(args):
 
 if __name__ == "__main__":
     args = load_arguments()
-    print args
+    print (args)
     main(args)
